@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variable/cutom variable</title>
+    <style>
+
+        .container{
+            border:2px solid black;
+        }
+        .list{
+            font-size:35px;
+        }
+        #list1{
+            --Sigma:100px;
+            /* font-size:var(--Sigma); */
+        }
+        #list2{
+            /* font-size:var(--sigma); */
+            color:var(--development);
+        }
+        #list3{
+            border: var(--boxborder);
+        }
+        :root{
+            --development:blue;
+            --boxborder:12px solid pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li class="list" id="list1">first</li>
+            <li class="list" id="list2">Second</li>
+            <li class="list" id="list3">Third</li>
+            <li class="list" id="list4">Fourth</li>
+            <li class="list" id="list5">fifth</li>
+        </ul>
+    </div>
+</body>
+</html>
